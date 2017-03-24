@@ -13,6 +13,7 @@ namespace Komis_motocykli.Controllers
         {
             //komentarz
             //edycja online
+            //pracujemy nad logowaniem
             return View();
         }
     }
