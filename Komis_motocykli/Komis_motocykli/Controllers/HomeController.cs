@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Komis_motocykli.DAL;
+using Komis_motocykli.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,12 +10,14 @@ namespace Komis_motocykli.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
+
+        private KomisContext db = new KomisContext();
+
         public ActionResult Index()
         {
-            //komentarz
-            //edycja online
-            //pracujemy nad logowaniem
+            Kategoria kategoria = new Kategoria { NazwaKategorii = "Enduro", NazwaPlikuIkony="enduro.png", OpisKategorii= "rodzaj sportu motorowego polegający" };
+            db.Kategorie.Add(kategoria);
+            db.SaveChanges();
             return View();
         }
     }

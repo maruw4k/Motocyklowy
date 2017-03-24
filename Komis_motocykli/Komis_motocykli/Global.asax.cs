@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Komis_motocykli.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +13,7 @@ namespace Komis_motocykli
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<KomisContext>(null);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
