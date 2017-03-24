@@ -11,6 +11,7 @@ namespace Komis_motocykli.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            //komentarz
             return View();
         }
     }
