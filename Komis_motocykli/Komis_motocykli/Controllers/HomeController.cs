@@ -12,6 +12,7 @@ namespace Komis_motocykli.Controllers
         public ActionResult Index()
         {
             //komentarz
+            //edycja online
             return View();
         }
     }
