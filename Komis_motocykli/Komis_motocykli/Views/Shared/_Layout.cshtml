@@ -11,7 +11,7 @@
                 Koszyk (0)
                 <span></span>
             </a>
-            <a id="indexHeaderLogo" href="link">
+            <a id="indexHeaderLogo" href="@Url.Content("~/")">
                 <img src="@Url.Content("~/Content/Images/logo.png")" class="center" />
             </a>
         </div>
@@ -24,7 +24,14 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="link">O nas</a></li>
+                @*alternatywny sposób*@
+                <li>@Html.ActionLink("Onas", "StronyStatyczne", "Home", new { nazwa = "O nas" }, null)</li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Pomoc" })" style="" >Pomoc</a></li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Logowanie" })" style="">Logowanie</a></li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Rejestracja" })" style="">Rejestracja</a></li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Oferta" })" style="">Oferta</a></li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a></li>
+
                 <li><a href="link">Społeczność</a></li>
                 <li><a href="link">Opinie</a></li>
                 <li><a href="link">Pomoc</a></li>
