@@ -21,6 +21,8 @@ namespace Komis_motocykli.Models
         [Required(ErrorMessage = "Wprowadz cene motocyklu")]
         public decimal CenaMotoru { get; set; }
         public bool Ukryty { get; set; }
+        public string OpisSkrocony { get; set; }
+  
 
 
         public virtual Kategoria Kategoria { get; set; }

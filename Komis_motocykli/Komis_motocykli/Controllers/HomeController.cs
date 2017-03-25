@@ -15,9 +15,11 @@ namespace Komis_motocykli.Controllers
 
         public ActionResult Index()
         {
-            Kategoria kategoria = new Kategoria { NazwaKategorii = "Enduro", NazwaPlikuIkony="enduro.png", OpisKategorii= "rodzaj sportu motorowego polegający" };
-            db.Kategorie.Add(kategoria);
-            db.SaveChanges();
+            var listaKategorii = db.Kategorie.ToList();
+
+            //Kategoria kategoria = new Kategoria { NazwaKategorii = "Enduro", NazwaPlikuIkony="enduro.png", OpisKategorii= "rodzaj sportu motorowego polegający" };
+            //db.Kategorie.Add(kategoria);
+            //db.SaveChanges();
             return View();
         }
     }
