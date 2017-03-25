@@ -1,5 +1,6 @@
 ﻿using Komis_motocykli.DAL;
 using Komis_motocykli.Models;
+using Komis_motocykli.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,23 @@ namespace Komis_motocykli.Controllers
 
         public ActionResult Index()
         {
-            var listaKategorii = db.Kategorie.ToList();
+            var kategorie = db.Kategorie.ToList();
 
-            //Kategoria kategoria = new Kategoria { NazwaKategorii = "Enduro", NazwaPlikuIkony="enduro.png", OpisKategorii= "rodzaj sportu motorowego polegający" };
-            //db.Kategorie.Add(kategoria);
-            //db.SaveChanges();
-            return View();
+            var nowe = db.Motocykle.Where(a => !a.Uzywany).OrderByDescending(a => a.DataDodania).Take(3).ToList();
+
+            var uzywane = db.Motocykle.Where(a => a.Uzywany).ToList();
+
+            var vm = new HomeViewModel()
+            {
+                Kategorie = kategorie,
+                Nowe = nowe,
+                Uzywane = uzywane
+
+
+            };
+
+            
+            return View(vm);
         }
 
         public ActionResult StronyStatyczne(string nazwa)

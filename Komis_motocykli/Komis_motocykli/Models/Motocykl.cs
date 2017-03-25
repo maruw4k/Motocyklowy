@@ -20,7 +20,7 @@ namespace Komis_motocykli.Models
         public string OpisMotoru{ get; set; }
         [Required(ErrorMessage = "Wprowadz cene motocyklu")]
         public decimal CenaMotoru { get; set; }
-        public bool Ukryty { get; set; }
+        public bool Uzywany { get; set; }
         public string OpisSkrocony { get; set; }
   
 
