@@ -22,9 +22,7 @@ namespace Komis_motocykli.Controllers
 
         public ActionResult Lista(string nazwaKategorii)
         {
-            var kategoria = db.Kategoria.Include("Motocykle").Where(k => k.NazwaKategorii.ToUpper() == nazwaKategorii.ToUpper()).Single();
-            var motocykle = kategoria.Motocykle.ToList();
-            return View(motocykle);
+            return View();
         }
 
         public ActionResult Szczegoly(string id)

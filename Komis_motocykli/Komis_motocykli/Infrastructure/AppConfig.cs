@@ -10,7 +10,7 @@ namespace Komis_motocykli.Infrastructure
     {
         private static string _ikonyKategoriFolderWzgledny = ConfigurationManager.AppSettings["IkonyKategoriiFolder"];
 
-        public static string IkonyKategoriFolderWzgledny
+        public static string IkonyKategoriiFolderWzgledny
         {
             get
             {
@@ -18,13 +18,13 @@ namespace Komis_motocykli.Infrastructure
             }
         }
 
-        private static string _obrazkiFolderWzgledny = ConfigurationManager.AppSettings["ObrazkiFolder"];
+        private static string _ObrazkiFolderWzgledny = ConfigurationManager.AppSettings["ObrazkiFolder"];
 
         public static string ObrazkiFolderWzgledny
         {
             get
             {
-                return _obrazkiFolderWzgledny;
+                return _ObrazkiFolderWzgledny;
             }
         } 
     }
