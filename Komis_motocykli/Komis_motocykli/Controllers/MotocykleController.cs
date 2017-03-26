@@ -20,12 +20,7 @@ namespace Komis_motocykli.Controllers
             return View();
         }
 
-        public ActionResult Lista(string nazwaKategorii)
-        {
-            return View();
-        }
-
-        public ActionResult Szczegoly(string id)
+        public ActionResult Lista()
         {
             return View();
         }
