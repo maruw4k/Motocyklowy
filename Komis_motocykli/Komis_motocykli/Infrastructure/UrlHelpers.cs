@@ -9,10 +9,10 @@ namespace Komis_motocykli.Infrastructure
 {
     public static class UrlHelpers
     {
-        public static string IkonyKategoriiSciezka(this UrlHelper helper, string nazwakonyKategorii)
+        public static string IkonyKategoriiSciezka(this UrlHelper helper, string nazwaIkonyKategorii)
         {
-            var ikonyKategoriFolder = AppConfig.IkonyKategoriiFolderWzgledny;
-            var sciezka = Path.Combine(ikonyKategoriFolder, nazwakonyKategorii);
+            var IkonyKategoriFolder = AppConfig.IkonyKategoriFolderWzgledny;
+            var sciezka = Path.Combine(IkonyKategoriFolder, nazwaIkonyKategorii);
             var sciezkaBezwzgledna = helper.Content(sciezka);
 
 

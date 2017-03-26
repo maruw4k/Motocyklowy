@@ -204,6 +204,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KoszykController.cs" />
     <Compile Include="Controllers\MotocykleController.cs" />
     <Compile Include="DAL\KomisContext.cs" />
     <Compile Include="DAL\KomisInitializer.cs" />
@@ -257,6 +258,7 @@
     <Content Include="Views\Home\Pomoc.cshtml" />
     <Content Include="Views\Home\Oferta.cshtml" />
     <Content Include="Views\Motocykle\Lista.cshtml" />
+    <Content Include="Views\Koszyk\DodajDoKoszyka.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
