@@ -218,22 +218,6 @@
     <Compile Include="Migrations\201703251733519_InitialCreate.Designer.cs">
       <DependentUpon>201703251733519_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703251741103_%27dodaniePolaOpisSkrocony%27.cs" />
-    <Compile Include="Migrations\201703251741103_%27dodaniePolaOpisSkrocony%27.Designer.cs">
-      <DependentUpon>201703251741103_%27dodaniePolaOpisSkrocony%27.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703251808526_dodaniePolaTest.cs" />
-    <Compile Include="Migrations\201703251808526_dodaniePolaTest.Designer.cs">
-      <DependentUpon>201703251808526_dodaniePolaTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703251812545_usunieciePolaTest.cs" />
-    <Compile Include="Migrations\201703251812545_usunieciePolaTest.Designer.cs">
-      <DependentUpon>201703251812545_usunieciePolaTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201703252140440_zmianaNaUzywany.cs" />
-    <Compile Include="Migrations\201703252140440_zmianaNaUzywany.Designer.cs">
-      <DependentUpon>201703252140440_zmianaNaUzywany.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Kategoria.cs" />
     <Compile Include="Models\Motocykl.cs" />
@@ -259,6 +243,8 @@
     <Content Include="Views\Home\Oferta.cshtml" />
     <Content Include="Views\Motocykle\Lista.cshtml" />
     <Content Include="Views\Koszyk\DodajDoKoszyka.cshtml" />
+    <Content Include="Views\Motocykle\_KategorieMenu.cshtml" />
+    <Content Include="Views\Motocykle\_MotocykleList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -272,18 +258,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201703251733519_InitialCreate.resx">
       <DependentUpon>201703251733519_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703251741103_%27dodaniePolaOpisSkrocony%27.resx">
-      <DependentUpon>201703251741103_%27dodaniePolaOpisSkrocony%27.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703251808526_dodaniePolaTest.resx">
-      <DependentUpon>201703251808526_dodaniePolaTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703251812545_usunieciePolaTest.resx">
-      <DependentUpon>201703251812545_usunieciePolaTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703252140440_zmianaNaUzywany.resx">
-      <DependentUpon>201703252140440_zmianaNaUzywany.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

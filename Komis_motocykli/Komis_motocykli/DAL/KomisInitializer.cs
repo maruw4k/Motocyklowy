@@ -23,8 +23,10 @@ namespace Komis_motocykli.DAL
 
             };
 
-            kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
+            kategorie.ForEach(k => context.Kategoria.AddOrUpdate(k));
             context.SaveChanges();
+
+            
 
           
 

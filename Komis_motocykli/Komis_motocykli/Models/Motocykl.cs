@@ -14,8 +14,7 @@ namespace Komis_motocykli.Models
         [StringLength(50)]
         public string NazwaMotoru { get; set; }
         public int Pojemnosc { get; set; }
-        public DateTime DataDodania { get; set; }
-        public DateTime RokProdukcji { get; set; }
+        public int RokProdukcji { get; set; }
         public string NazwaPlikuObrazka { get; set; }
         public string OpisMotoru{ get; set; }
         [Required(ErrorMessage = "Wprowadz cene motocyklu")]

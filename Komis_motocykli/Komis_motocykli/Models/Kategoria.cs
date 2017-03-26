@@ -9,7 +9,7 @@ namespace Komis_motocykli.Models
         public int KategoriaId { get; set; }
         [Required(ErrorMessage = "Wprowadz nazwe kategorii")]
         public string NazwaKategorii { get; set; }
-        [Required(ErrorMessage = "Wprowadz nazwe kategorii")]
+        [Required(ErrorMessage = "Wprowadz opis kategorii")]
         [StringLength(200)]
         public string  OpisKategorii { get; set; }
         public string NazwaPlikuIkony { get; set; }

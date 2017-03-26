@@ -27,7 +27,7 @@ namespace Komis_motocykli.Migrations
                         NazwaMotoru = c.String(nullable: false, maxLength: 50),
                         Pojemnosc = c.Int(nullable: false),
                         DataDodania = c.DateTime(nullable: false),
-                        RokProdukcji = c.DateTime(nullable: false),
+                        RokProdukcji = c.Int(nullable: false),
                         NazwaPlikuObrazka = c.String(),
                         OpisMotoru = c.String(),
                         CenaMotoru = c.Decimal(nullable: false, precision: 18, scale: 2),

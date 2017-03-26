@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Komis_motocykli.Models.Motocykl>
+@using Komis_motocykli.Infrastructure
+
+        <ul class="KursyTrzyKolumny KursCena">
+            @foreach (var motocykl in Model)
+            {
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka", "Koszyk", new { id = motocykl.MotocyklId})" >
+                        <img src="@Url.Content("~/Content/Images/koszyk.png")" />
+                    </a>
+
+                    @if(motocykl.Uzywany)
+                    {
+                        <div class="newFlag"></div>
+                    }
+
+                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykl", new { id = motocykl.MotocyklId } )">
+                        <img class="kurs" src="@Url.ObrazkiSciezka(motocykl.NazwaPlikuObrazka)" />
+                        <h1>
+                            @motocykl.NazwaMotoru - @motocykl.RokProdukcji
+                        </h1>
+                    </a>
+                </article>
+            </li>
+            }
+            </ul>
