@@ -17,102 +17,52 @@
             </li>
         }
     </ul>
-    <a href="link">
-        <img id="baner" src="../Content/Images/baner.png" />
-    </a>
+
 </nav>
 
 <section>
     <ul class="KursyTrzyKolumny duzaListaKursy">
-        <li>
-            <article>
-                <a class="dodajDoKoszykaLink" href="link">
-                    <img src="../Content/Images/koszyk.png" />
-                </a>
-                <a class="kursSzczegolyLink" href="link">
-                    <div class="bestsellerFlag"></div>
-                    <img class="kurs" src="../Content/Kursy/obrazekcss.png" />
-                    <h1>
-                        Tutaj będzie tytuł
-                    </h1>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <a class="dodajDoKoszykaLink" href="link">
-                    <img src="../Content/Images/koszyk.png" />
-                </a>
-                <a class="kursSzczegolyLink" href="link">
-                    <div class="bestsellerFlag"></div>
-                    <img class="kurs" src="../Content/Kursy/obrazekhtml.png" />
-                    <h1>
-                        Tutaj będzie tytuł
-                    </h1>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <a class="dodajDoKoszykaLink" href="link">
-                    <img src="../Content/Images/koszyk.png" />
-                </a>
-                <a class="kursSzczegolyLink" href="link">
-                    <div class="bestsellerFlag"></div>
-                    <img class="kurs" src="../Content/Kursy/obrazekjquery.png" />
-                    <h1>
-                        Tutaj będzie tytuł
-                    </h1>
-                </a>
-            </article>
-        </li>
+        @foreach (var nowe in Model.Nowe)
+        {
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = nowe.MotocyklId})">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = nowe.MotocyklId})">
+                        <div class="newFlag"></div>
+                        <img class="kurs" src="@Url.ObrazkiSciezka(nowe.NazwaPlikuObrazka)" />
+                        <h1>
+                            @nowe.NazwaMotoru - @nowe.CenaMotoru
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        }
     </ul>
 </section>
+
 <section>
     <ul class="KursyTrzyKolumny duzaListaKursy">
-        <li>
-            <article>
-                <a class="dodajDoKoszykaLink" href="link">
-                    <img src="../Content/Images/koszyk.png" />
-                </a>
-                <a class="kursSzczegolyLink" href="link">
-                    <div class="newFlag"></div>
-                    <img class="kurs" src="../Content/Kursy/obrazekaspnet.png" />
-                    <h1>
-                        Tutaj będzie tytuł
-                    </h1>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <a class="dodajDoKoszykaLink" href="link">
-                    <img src="../Content/Images/koszyk.png" />
-                </a>
-                <a class="kursSzczegolyLink" href="link">
-                    <div class="newFlag"></div>
-                    <img class="kurs" src="../Content/Kursy/obrazekcsharp.png" />
-                    <h1>
-                        Tutaj będzie tytuł
-                    </h1>
-                </a>
-            </article>
-        </li>
-        <li>
-            <article>
-                <a class="dodajDoKoszykaLink" href="link">
-                    <img src="../Content/Images/koszyk.png" />
-                </a>
-                <a class="kursSzczegolyLink" href="link">
-                    <div class="newFlag"></div>
-                    <img class="kurs" src="../Content/Kursy/obrazekmvc.png" />
-                    <h1>
-                        Tutaj będzie tytuł
-                    </h1>
-                </a>
-            </article>
-        </li>
+        @foreach (var uzywane in Model.Uzywane)
+        {
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = uzywane.MotocyklId})">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = uzywane.MotocyklId})">
+                    
+                        <img class="kurs" src="@Url.ObrazkiSciezka(uzywane.NazwaPlikuObrazka)" />
+                        <h1>
+                            @uzywane.NazwaMotoru - @uzywane.CenaMotoru
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        }
     </ul>
 </section>
+
 
 

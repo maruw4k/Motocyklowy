@@ -7,13 +7,13 @@ namespace Komis_motocykli.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class initialize1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialize1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201703251733519_InitialCreate"; }
+            get { return "201703262151561_initialize1"; }
         }
         
         string IMigrationMetadata.Source

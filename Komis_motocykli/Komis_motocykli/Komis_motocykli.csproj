@@ -214,9 +214,13 @@
     </Compile>
     <Compile Include="Infrastructure\AppConfig.cs" />
     <Compile Include="Infrastructure\UrlHelpers.cs" />
-    <Compile Include="Migrations\201703251733519_InitialCreate.cs" />
-    <Compile Include="Migrations\201703251733519_InitialCreate.Designer.cs">
-      <DependentUpon>201703251733519_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201703262149362_initialize.cs" />
+    <Compile Include="Migrations\201703262149362_initialize.Designer.cs">
+      <DependentUpon>201703262149362_initialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703262151561_initialize1.cs" />
+    <Compile Include="Migrations\201703262151561_initialize1.Designer.cs">
+      <DependentUpon>201703262151561_initialize1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Kategoria.cs" />
@@ -256,8 +260,11 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703251733519_InitialCreate.resx">
-      <DependentUpon>201703251733519_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703262149362_initialize.resx">
+      <DependentUpon>201703262149362_initialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703262151561_initialize1.resx">
+      <DependentUpon>201703262151561_initialize1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

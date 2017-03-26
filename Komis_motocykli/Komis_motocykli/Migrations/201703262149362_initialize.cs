@@ -3,7 +3,7 @@ namespace Komis_motocykli.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class initialize : DbMigration
     {
         public override void Up()
         {
@@ -26,12 +26,12 @@ namespace Komis_motocykli.Migrations
                         KategoriaID = c.Int(nullable: false),
                         NazwaMotoru = c.String(nullable: false, maxLength: 50),
                         Pojemnosc = c.Int(nullable: false),
-                        DataDodania = c.DateTime(nullable: false),
                         RokProdukcji = c.Int(nullable: false),
                         NazwaPlikuObrazka = c.String(),
                         OpisMotoru = c.String(),
                         CenaMotoru = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Ukryty = c.Boolean(nullable: false),
+                        Uzywany = c.Boolean(nullable: false),
+                        OpisSkrocony = c.String(),
                     })
                 .PrimaryKey(t => t.MotocyklId)
                 .ForeignKey("dbo.Kategoria", t => t.KategoriaID, cascadeDelete: true)
