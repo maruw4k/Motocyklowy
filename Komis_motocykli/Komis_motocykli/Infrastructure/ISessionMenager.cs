@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Komis_motocykli.Infrastructure
 {
-    public interface ISessionManager
+    public interface ISessionMenager
     {
         T Get<T>(string key);
         void Set<T>(string name, T value);

@@ -8,12 +8,12 @@ using System.Web;
 
 namespace Komis_motocykli.Infrastructure
 {
-    public class KoszykManager
+    public class KoszykMenager
     {
         private KomisContext db;
-        ISessionManager session;
+        ISessionMenager session;
 
-        public KoszykManager(ISessionManager session, KomisContext db)
+        public KoszykMenager(ISessionMenager session, KomisContext db)
         {
             this.session = session;
             this.db = db;
@@ -87,7 +87,7 @@ namespace Komis_motocykli.Infrastructure
         public decimal PobierzWartoscKoszyka()
         {
             var koszyk = PobierzKoszyk();
-            return koszyk.Sum(k => k.Ilosc * k.Motocykl.CenaMotoru);
+            return koszyk.Sum(k => (k.Ilosc * k.Motocykl.CenaMotoru));
         }
 
 
@@ -99,13 +99,13 @@ namespace Komis_motocykli.Infrastructure
         }
 
 
-        public Zamowienie UtworzZamowienie(Zamowienie noweZamowienie, string userId)
+        public Zamowienie UtworzZamowienie(Zamowienie noweZamowienie)
         {
             var koszyk = PobierzKoszyk();
             noweZamowienie.DataDodania = DateTime.Now;
             //noweZamowienie.userId = userId;
 
-            db.Zamowienie.Add(noweZamowienie);
+            db.Zamowienia.Add(noweZamowienie);
 
             if (noweZamowienie.PozycjeZamowienia == null)
                 noweZamowienie.PozycjeZamowienia = new List<PozycjaZamowienia>();

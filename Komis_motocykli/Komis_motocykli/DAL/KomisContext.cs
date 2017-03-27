@@ -24,7 +24,7 @@ namespace Komis_motocykli.DAL
        
         public DbSet<Kategoria> Kategorie { get; set; }
         public DbSet<Motocykl> Motocykle { get; set; }
-        public DbSet<Zamowienie> Zamowienie { get; set; }
+        public DbSet<Zamowienie> Zamowienia { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }
 
 

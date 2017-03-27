@@ -6,7 +6,7 @@ using System.Web.SessionState;
 
 namespace Komis_motocykli.Infrastructure
 {
-    public class SessionMenager : ISessionManager
+    public class SessionMenager : ISessionMenager
     {
         private HttpSessionState session;
 

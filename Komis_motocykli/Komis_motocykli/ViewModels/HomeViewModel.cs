@@ -8,7 +8,7 @@ namespace Komis_motocykli.ViewModels
 {
     public class HomeViewModel
     {
-        public IEnumerable<Kategoria> Kategorie{ get; set; }
+        public IEnumerable<Kategoria> Kategorie { get; set; }
         public IEnumerable<Motocykl> Nowe { get; set; }
         public IEnumerable<Motocykl> Uzywane { get; set; }
     }
