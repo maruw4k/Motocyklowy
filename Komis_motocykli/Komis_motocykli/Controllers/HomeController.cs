@@ -16,16 +16,16 @@ namespace Komis_motocykli.Controllers
 
         public ActionResult Index()
         {
-            var kategorie = db.Kategoria.ToList();
+            var kategorie = db.Kategorie.ToList();
 
-            var nowe = db.Motocykl.Where(a => !a.Uzywany).Take(3).ToList();
+            var nowe = db.Motocykle.Where(a => !a.Uzywany).OrderByDescending(a => a.RokProdukcji).Take(3);
 
-            var uzywane = db.Motocykl.Where(a => a.Uzywany).ToList();
+            var uzywane = db.Motocykle.Where(a => a.Uzywany);
 
             var vm = new HomeViewModel()
             {
                 Kategorie = kategorie,
-                Nowe = nowe,
+               Nowe = nowe,
                 Uzywane = uzywane
 
 

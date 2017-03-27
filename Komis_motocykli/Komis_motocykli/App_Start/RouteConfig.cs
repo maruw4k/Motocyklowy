@@ -13,6 +13,8 @@ namespace Komis_motocykli
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+
             routes.MapRoute(
                 name: "StronyStatyczne",
                 url: "strony/{nazwa}.html",

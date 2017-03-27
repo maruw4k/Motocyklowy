@@ -24,7 +24,7 @@ namespace Komis_motocykli.DAL
 
             };
 
-            kategorie.ForEach(k => context.Kategoria.AddOrUpdate(k));
+            kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
             context.SaveChanges();
 
             var motory = new List<Motocykl>
@@ -38,7 +38,7 @@ namespace Komis_motocykli.DAL
 
             };
 
-            motory.ForEach(k => context.Motocykl.AddOrUpdate(k));
+            motory.ForEach(k => context.Motocykle.AddOrUpdate(k));
             context.SaveChanges();
 
 

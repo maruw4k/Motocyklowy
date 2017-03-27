@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Komis_motocykli.Controllers
 {
-    
+
 
     public class MotocykleController : Controller
     {
@@ -20,7 +20,14 @@ namespace Komis_motocykli.Controllers
             return View();
         }
 
-        public ActionResult Lista()
+        public ActionResult Lista(string nazwaKategori)
+        {
+            var kategoria = db.Kategorie.Include("Motocykle").Where(k => k.NazwaKategorii.ToUpper() == nazwaKategori.ToUpper()).Single();
+            var motocykle = kategoria.Motocykle.ToList();
+            return View(motocykle);
+        }
+
+        public ActionResult Szczegoly(string id)
         {
             return View();
         }
@@ -28,8 +35,8 @@ namespace Komis_motocykli.Controllers
         [ChildActionOnly]
         public ActionResult KategorieMenu()
         {
-            var kategorie = db.Kategoria.ToList(); 
-            return PartialView("_KategorieMenu",kategorie);
+            var kategorie = db.Kategorie.ToList();
+            return PartialView("_KategorieMenu", kategorie);
         }
 
 
