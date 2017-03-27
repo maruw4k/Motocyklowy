@@ -14,6 +14,7 @@ namespace Komis_motocykli.Controllers
 
         private KomisContext db = new KomisContext();
 
+  
         public ActionResult Index()
         {
             var kategorie = db.Kategorie.ToList();
@@ -34,7 +35,7 @@ namespace Komis_motocykli.Controllers
             
             return View(vm);
         }
-
+        [OutputCache(Duration = 60000)]
         public ActionResult StronyStatyczne(string nazwa)
         {
             return View(nazwa);

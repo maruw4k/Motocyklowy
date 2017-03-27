@@ -26,7 +26,7 @@ namespace Komis_motocykli.Controllers
             var motocykle = kategoria.Motocykle.ToList();
             return View(motocykle);
         }
-
+        [OutputCache(Duration = 60000)]
         public ActionResult Szczegoly(int id)
         {
             var motocykl = db.Motocykle.Find(id);
@@ -35,8 +35,10 @@ namespace Komis_motocykli.Controllers
         }
 
         [ChildActionOnly]
+        [OutputCache(Duration = 60000)]
         public ActionResult KategorieMenu()
         {
+            
             var kategorie = db.Kategorie.ToList();
             return PartialView("_KategorieMenu", kategorie);
         }

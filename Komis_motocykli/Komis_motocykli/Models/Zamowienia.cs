@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PraktyczneKursy.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -22,10 +23,14 @@ namespace Komis_motocykli.Models
         public DateTime DataDodania { get; set; }
         public StanZamowienia StanTranzakcji { get; set; }
 
+        public decimal WartoscZamowienia { get; set; }
+
+        public List<PozycjaZamowienia> PozycjeZamowienia { get; set; }
+    }
+
         public enum StanZamowienia
         {
             Nowe,
             Zrealizowane
         }
     }
-}
