@@ -27,9 +27,11 @@ namespace Komis_motocykli.Controllers
             return View(motocykle);
         }
 
-        public ActionResult Szczegoly(string id)
+        public ActionResult Szczegoly(int id)
         {
-            return View();
+            var motocykl = db.Motocykle.Find(id);
+
+            return View(motocykl);
         }
 
         [ChildActionOnly]

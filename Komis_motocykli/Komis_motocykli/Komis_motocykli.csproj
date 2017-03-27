@@ -249,6 +249,7 @@
     <Content Include="Views\Koszyk\DodajDoKoszyka.cshtml" />
     <Content Include="Views\Motocykle\_KategorieMenu.cshtml" />
     <Content Include="Views\Motocykle\_MotocykleList.cshtml" />
+    <Content Include="Views\Motocykle\Szczegoly.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

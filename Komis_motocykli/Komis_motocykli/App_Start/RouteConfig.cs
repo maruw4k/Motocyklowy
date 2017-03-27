@@ -16,6 +16,20 @@ namespace Komis_motocykli
 
 
             routes.MapRoute(
+                name: "MotocykleList",
+                url: "Kategoria/{nazwaKategori}.html",
+                defaults: new { controller = "Motocykle", action = "Lista" }
+                );
+
+
+            routes.MapRoute(
+                name: "Szczegoly",
+                url: "Szczegoly/{id}.html",
+                defaults: new { controller = "Motocykle", action = "Szczegoly" }
+                );
+
+
+            routes.MapRoute(
                 name: "StronyStatyczne",
                 url: "strony/{nazwa}.html",
                 defaults: new { controller = "Home", action = "StronyStatyczne" }

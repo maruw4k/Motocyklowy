@@ -1,0 +1,48 @@
+﻿@model Komis_motocykli.Models.Motocykl
+@using Komis_motocykli.Infrastructure
+
+@{
+    ViewBag.Title = "Szczegoly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="ListaKategoriZawartosc">
+    @Html.Action("KategorieMenu") 
+    <div id="KategorieListPrawaSekcja">
+        <div id="Breadcrumb">
+            <img src="../Content/Images/dommaly.png" />
+            <a href="link">
+                Start > ASP.NET
+            </a>
+        </div>
+
+        <section id="SekcjaKurs">
+            <div id="KursLewa">
+                <img src="@Url.ObrazkiSciezka(Model.NazwaPlikuObrazka)" />
+            </div>
+            <div id="KursPrawa">
+                <div id="KursNazwa">
+                    <h1>
+                        @Model.NazwaMotoru
+                    </h1>
+                    <h2>
+                        @Model.Pojemnosc
+                    </h2>
+                </div>
+                <div id="KursCena">
+                    <div>
+                        @Model.CenaMotoru<span>PLN</span>
+                    </div>
+                    <a href="@Url.Action("DodajDoKoszyka", "Koszyk", new { id = Model.MotocyklId} )"></a>
+                </div>
+                <div id="KursOpis">
+                    @Model.OpisMotoru
+                </div>
+                <div id="KursInfo">
+                    @Model.OpisSkrocony
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
