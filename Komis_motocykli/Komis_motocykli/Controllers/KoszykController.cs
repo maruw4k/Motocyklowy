@@ -33,7 +33,7 @@ namespace Komis_motocykli.Controllers
                 CenaCalkowita = cenaCalkowita
             };
 
-            return View();
+            return View(koszyVM);
         }
 
         public ActionResult DodajDoKoszyka(int id)
@@ -45,6 +45,25 @@ namespace Komis_motocykli.Controllers
         public int PobierzIloscElementowKoszyka()
         {
             return koszykMenager.PobierzIloscPozycjiKoszyka();
+        }
+
+        public ActionResult UsunZKoszyka(int motocyklId)
+        {
+            int iloscPozycji = koszykMenager.UsunZKoszyka(motocyklId);
+            int iloscPozycjiKoszyka = koszykMenager.PobierzIloscPozycjiKoszyka();
+            decimal wartoscKoszyka = koszykMenager.PobierzWartoscKoszyka();
+
+
+            var wynik = new KoszykUsuwanieViewModel
+            {
+                IdPozycjiUsuwanej = motocyklId,
+                KoszykIloscPozycjiUsuwanej = iloscPozycji,
+                KoszykCenaCalkowita = wartoscKoszyka,
+                KoszykIloscPozycji = iloscPozycjiKoszyka,
+            };
+
+            return Json(wynik);
+
         }
 
     }

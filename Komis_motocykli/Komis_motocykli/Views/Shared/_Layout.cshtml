@@ -7,8 +7,8 @@
 <body>
     <header>
         <div style="overflow: hidden;">
-            <a id="koszykHeaderLink" href="link">
-                Koszyk (0)
+            <a id="koszykHeaderLink" href="@Url.Action("Index", "Koszyk")">
+                Koszyk (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)
                 <span></span>
             </a>
             <a id="indexHeaderLogo" href="@Url.Content("~/")">
@@ -32,17 +32,14 @@
                 <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Oferta" })" style="">Oferta</a></li>
                 <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a></li>
 
-                <li><a href="link">Społeczność</a></li>
-                <li><a href="link">Opinie</a></li>
                 <li><a href="link">Pomoc</a></li>
                 <li><a href="link">Regulamin</a></li>
                 <li><a href="link">Kontakt</a></li>
             </ul>
         </nav>
-        <div id="footerLogo">
-        </div>
-        <div id="footerCopyright">
-            Copyright &copy; 2016 P. Kursy
+       
+        <div>
+            Copyright &copy; 2017 Krzeszo
         </div>
     </footer>
 
