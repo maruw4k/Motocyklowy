@@ -1,4 +1,5 @@
 ﻿using Komis_motocykli.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using PraktyczneKursy.Models;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Web;
 
 namespace Komis_motocykli.DAL
 {
-    public class KomisContext : DbContext
+    public class KomisContext : IdentityDbContext<ApplicationUser>
     {
         public KomisContext() : base("KomisContext")
         {
@@ -27,6 +28,10 @@ namespace Komis_motocykli.DAL
         public DbSet<Zamowienie> Zamowienia { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }
 
+        public static KomisContext Create()
+        {
+            return new KomisContext();
+        }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
