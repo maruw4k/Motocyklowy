@@ -10,6 +10,9 @@ namespace Komis_motocykli.Models
     public class Zamowienie
     {
         public int ZamowienieID { get; set; }
+        public string userId{ get; set; }
+        public virtual ApplicationUser User { get; set; }
+
         [Required(ErrorMessage = "Wprowadz imie")]
         [StringLength(50)]
         public string Imie { get; set; }

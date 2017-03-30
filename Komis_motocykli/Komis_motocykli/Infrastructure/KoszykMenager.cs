@@ -99,11 +99,11 @@ namespace Komis_motocykli.Infrastructure
         }
 
 
-        public Zamowienie UtworzZamowienie(Zamowienie noweZamowienie)
+        public Zamowienie UtworzZamowienie(Zamowienie noweZamowienie, string userId)
         {
             var koszyk = PobierzKoszyk();
             noweZamowienie.DataDodania = DateTime.Now;
-            //noweZamowienie.userId = userId;
+            noweZamowienie.userId = userId;
 
             db.Zamowienia.Add(noweZamowienie);
 
