@@ -1,4 +1,5 @@
 ﻿using Komis_motocykli.App_Start;
+using Komis_motocykli.DAL;
 using Komis_motocykli.Models;
 using Komis_motocykli.ViewModels;
 using Microsoft.AspNet.Identity;
@@ -6,6 +7,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -16,6 +18,8 @@ namespace Komis_motocykli.Controllers
 {
     public class ManageController : Controller
     {
+        private KomisContext db = new KomisContext();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -158,6 +162,19 @@ namespace Komis_motocykli.Controllers
 
             Request.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie, DefaultAuthenticationTypes.TwoFactorCookie);
             Request.GetOwinContext().Authentication.SignIn(new AuthenticationProperties { IsPersistent = isPersistent }, await user.GenerateUserIdentityAsync(UserManager));
+        }
+
+        public ActionResult ListaZamowien()
+        {
+            var name = User.Identity.Name;
+
+
+            IEnumerable<Zamowienie> zamowieniaUzytkownika;
+
+                var userId = User.Identity.GetUserId();
+                zamowieniaUzytkownika = db.Zamowienia.Where(o => o.userId == userId).Include("PozycjeZamowienia").OrderByDescending(o => o.DataDodania).ToArray();
+
+            return View(zamowieniaUzytkownika);
         }
     }
 }

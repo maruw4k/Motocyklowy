@@ -24,7 +24,7 @@ namespace Komis_motocykli.Models
         [StringLength(50)]
         public string Email { get; set; }
         public DateTime DataDodania { get; set; }
-        public StanZamowienia StanTranzakcji { get; set; }
+        public StanZamowienia StanZamowienia { get; set; }
 
         public decimal WartoscZamowienia { get; set; }
 

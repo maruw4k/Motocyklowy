@@ -28,16 +28,12 @@
         <nav>
             <ul>
                 @*alternatywny sposób*@
-                <li>@Html.ActionLink("Onas", "StronyStatyczne", "Home", new { nazwa = "O nas" }, null)</li>
-                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Pomoc" })" style="" >Pomoc</a></li>
-                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Logowanie" })" style="">Logowanie</a></li>
-                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Rejestracja" })" style="">Rejestracja</a></li>
+                <li>@Html.ActionLink("Onas", "StronyStatyczne", "Home", new { nazwa = "O nas" }, null)</li>          
                 <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Oferta" })" style="">Oferta</a></li>
                 <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a></li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Logowanie" })" style="">Logowanie</a></li>
+                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Rejestracja" })" style="">Rejestracja</a></li>
 
-                <li><a href="link">Pomoc</a></li>
-                <li><a href="link">Regulamin</a></li>
-                <li><a href="link">Kontakt</a></li>
             </ul>
         </nav>
        

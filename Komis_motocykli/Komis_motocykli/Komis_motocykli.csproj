@@ -297,6 +297,10 @@
     <Compile Include="Migrations\201703300936023_Zamowienia.Designer.cs">
       <DependentUpon>201703300936023_Zamowienia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703302202179_Zmiana pol zamowien.cs" />
+    <Compile Include="Migrations\201703302202179_Zmiana pol zamowien.Designer.cs">
+      <DependentUpon>201703302202179_Zmiana pol zamowien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DaneUzytkownika.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -344,6 +348,7 @@
     <Content Include="Views\Koszyk\Zaplac.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Shared\_ManageLayout.cshtml" />
+    <Content Include="Views\Manage\ListaZamowien.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -370,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703300936023_Zamowienia.resx">
       <DependentUpon>201703300936023_Zamowienia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703302202179_Zmiana pol zamowien.resx">
+      <DependentUpon>201703302202179_Zmiana pol zamowien.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
