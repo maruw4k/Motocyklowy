@@ -16,6 +16,7 @@ using System.Web.Mvc;
 
 namespace Komis_motocykli.Controllers
 {
+    [Authorize]
     public class ManageController : Controller
     {
         private KomisContext db = new KomisContext();
@@ -166,13 +167,23 @@ namespace Komis_motocykli.Controllers
 
         public ActionResult ListaZamowien()
         {
+            bool isAdmin = User.IsInRole("Admin");
+            ViewBag.UserIsAdmin = isAdmin;
+
             var name = User.Identity.Name;
 
 
             IEnumerable<Zamowienie> zamowieniaUzytkownika;
 
+            if (isAdmin)
+            {
+                zamowieniaUzytkownika = db.Zamowienia.Include("PozycjeZamowienia").OrderByDescending(o => o.DataDodania).ToArray();
+            }
+            else
+            {
                 var userId = User.Identity.GetUserId();
                 zamowieniaUzytkownika = db.Zamowienia.Where(o => o.userId == userId).Include("PozycjeZamowienia").OrderByDescending(o => o.DataDodania).ToArray();
+            }
 
             return View(zamowieniaUzytkownika);
         }

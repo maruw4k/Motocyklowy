@@ -115,7 +115,7 @@ namespace Komis_motocykli.Infrastructure
             {
                 var nowaPozycjaZamowienia = new PozycjaZamowienia()
                 {
-                    KursId = koszykElement.Motocykl.MotocyklId,
+                    MotocyklId = koszykElement.Motocykl.MotocyklId,
                     Ilosc = koszykElement.Ilosc,
                     CenaZakupu = koszykElement.Motocykl.CenaMotoru
                 };
