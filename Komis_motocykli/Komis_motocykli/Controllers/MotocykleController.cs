@@ -20,12 +20,21 @@ namespace Komis_motocykli.Controllers
             return View();
         }
 
-        public ActionResult Lista(string nazwaKategori)
+        public ActionResult Lista(string nazwaKategori, string searchQuery = null)
         {
             var kategoria = db.Kategorie.Include("Motocykle").Where(k => k.NazwaKategorii.ToUpper() == nazwaKategori.ToUpper()).Single();
-            var motocykle = kategoria.Motocykle.ToList();
+            var motocykle = kategoria.Motocykle.Where(a => (searchQuery == null ||
+                                             a.NazwaMotoru.ToLower().Contains(searchQuery.ToLower())));
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_MotocykleList", motocykle);
+            }
+
             return View(motocykle);
+
         }
+
         [OutputCache(Duration = 60000)]
         public ActionResult Szczegoly(int id)
         {
@@ -41,6 +50,15 @@ namespace Komis_motocykli.Controllers
             
             var kategorie = db.Kategorie.ToList();
             return PartialView("_KategorieMenu", kategorie);
+        }
+
+
+        public ActionResult MotocyklePodpowiedzi(string fraza)
+        {
+            var motocykle = this.db.Motocykle.Where(a => a.NazwaMotoru.ToLower().Contains(fraza.ToLower()))
+                .Take(5).Select(a => new { label = a.NazwaMotoru });
+
+            return Json(motocykle, JsonRequestBehavior.AllowGet);
         }
 
 
