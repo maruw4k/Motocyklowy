@@ -6,46 +6,46 @@
     @System.Web.Optimization.Styles.Render("~/Content/themes/base/css")
 </head>
 <body>
-    
-        <header class="page-header">
-            
-                <a id="indexHeaderLogo" href="@Url.Content("~/")">
-                    <h1 class="logo">Komis motorowy</h1>
-                </a>
-                    <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Onas" })" style="">O nas</a>
-                    <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a>
-                   
 
-     
+    <header class="page-header">
+        <div>
+            <a id="indexHeaderLogo" href="@Url.Content("~/")">
+                <h1 class="logo">Komis motorowy</h1>
+            </a>
 
 
-                <a id="koszykHeaderLink" href="@Url.Action("Index", "Koszyk")">
-                    Koszyk (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)
-                    <img src="../Content/Images/koszyk_white.png" alt="Alternate Text" />
-                    <span></span>
-                </a>
+            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Onas" })" style="">O nas</a>
+            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Pomoc" })" style="">Pomoc</a>
+            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a>
 
-                @Html.Partial("_LoginPartial")
+            <a id="koszykHeaderLink" href="@Url.Action("Index", "Koszyk")">
+                <img class="basket-icon" src="../Content/Images/basket.png" alt="Ikona koszyka" />
+                 (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)
+               
+                
+            </a>
 
-        </header>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </header>
 
 
-        <div class="container">
-            @RenderBody()
+    <div class="container">
+        @RenderBody()
+
         
-            <div class="container">
-                <footer>
+            <footer>
 
 
-                    <div>
-                        Copyright &copy; 2017 Krzeszo
-                    </div>
-                </footer>
-            </div>
+                <div>
+                    Copyright &copy; 2017 Krzeszo
+                </div>
+            </footer>
+  
 
-                @RenderSection("Scripts", required: false)
-            </div>
+        @RenderSection("Scripts", required: false)
+    </div>
 
-    
+
 </body>
 </html>

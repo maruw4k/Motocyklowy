@@ -149,28 +149,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\arrow1.png" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Images\ajax-loader.gif" />
-    <Content Include="Content\Images\ajax-loader.png" />
-    <Content Include="Content\Images\baner.png" />
-    <Content Include="Content\Images\bestseller.png" />
-    <Content Include="Content\Images\dommaly.png" />
-    <Content Include="Content\Images\footer-cd.png" />
-    <Content Include="Content\Images\icons-18-black.png" />
-    <Content Include="Content\Images\icons-18-white.png" />
-    <Content Include="Content\Images\icons-36-black.png" />
-    <Content Include="Content\Images\icons-36-white.png" />
-    <Content Include="Content\Images\koszyk-details.png" />
+    <Content Include="Content\Images\basket.png" />
     <Content Include="Content\Images\koszyk.png" />
-    <Content Include="Content\Images\koszyk_white.png" />
-    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\new.png" />
     <Content Include="Content\Images\searchlogo.png" />
-    <Content Include="Content\Images\upload.png" />
     <Content Include="Content\Kategorie\aspnet.png" />
     <Content Include="Content\Kategorie\csharp.png" />
     <Content Include="Content\Kategorie\css.png" />
@@ -178,7 +160,6 @@
     <Content Include="Content\Kategorie\javascript.png" />
     <Content Include="Content\Kategorie\jquery.png" />
     <Content Include="Content\Kategorie\xml.png" />
-    <Content Include="Scripts\menuList.js" />
     <Content Include="Content\Motory\obrazekaspnet.png" />
     <Content Include="Content\Motory\obrazekcsharp.png" />
     <Content Include="Content\Motory\obrazekcss.png" />
@@ -232,12 +213,6 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Scripts\jquery-2.2.1.js" />
     <Content Include="Scripts\jquery-2.2.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.js" />
@@ -328,7 +303,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\Home\Onas.cshtml" />
-    <Content Include="Views\Home\Rejestracja.cshtml" />
     <Content Include="Views\Home\Logowanie.cshtml" />
     <Content Include="Views\Home\Regulamin.cshtml" />
     <Content Include="Views\Home\Pomoc.cshtml" />

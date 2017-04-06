@@ -2,13 +2,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="ListaKategoriZawartosc">
+
     @Html.Action("KategorieMenu", "Motocykle")
 
 
     <div id="KategorieListPrawaSekcja">
         <section class="SekcjaKoszyk">
-            <div class="SekcjaHeader" style="margin-bottom: 0px;">
+            <div class="SekcjaHeader">
                 <h1>
                     @RenderSection("SectionTitle", required: false)
                 </h1>
@@ -16,7 +16,7 @@
             @RenderBody()
         </section>
     </div>
-</div>
+
 
 @section Scripts
 {
