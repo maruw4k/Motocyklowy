@@ -259,54 +259,6 @@ a:hover, a:visited, a:link, a:active {
             text-align: center;
         }
 
-#KursCena {
-    overflow: hidden;
-}
-
-    #KursCena > div {
-        float: left;
-        width: 332px;
-        height: 67px;
-        text-align: center;
-        background-color: #0a5d7c;
-        color: white;
-        font-size: 56px;
-        line-height: 56px;
-        font-weight: normal;
-    }
-
-        #KursCena > div > span {
-            font-size: 19px;
-            font-family: 'Segoe UI Light';
-            margin-left: 5px;
-        }
-
-    #KursCena > a {
-        float: left;
-        width: 73px;
-        height: 67px;
-        background-color: #0a5d7c;
-        background-position: center center;
-    }
-
-#KursOpis {
-    font-size: 18px;
-    line-height: 22px;
-    color: #39312E;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: justify;
-}
-
-#KursInfo {
-    font-size: 18px;
-    line-height: 22px;
-    color: #39312E;
-    margin-top: 40px;
-    text-align: justify;
-    border-top: 1px solid #E5E5E5;
-    padding-top: 40px;
-}
 
 #SekcjaListaKategori {
     width: 100%;
@@ -399,7 +351,7 @@ ul.KursyTrzyKolumny {
             transition: all 0.5s ease;
         }
 
-        ul.KursyTrzyKolumny li a img.kurs {
+        ul.KursyTrzyKolumny li a img.motocykl {
 
             width: 100%;
             height: auto;
@@ -410,7 +362,7 @@ ul.KursyTrzyKolumny {
             transition: opacity 0.5s ease;
         }
 
-        ul.KursyTrzyKolumny li a:hover img.kurs {
+        ul.KursyTrzyKolumny li a:hover img.motocykl {
             opacity: 0.8;
             -webkit-transition: opacity 1s ease;
             -o-transition: opacity 1s ease;
@@ -451,34 +403,10 @@ ul.TrzyKolumnyList {
             height: 100%;
         }
 
-        ul.TrzyKolumnyList li a h1 {
-            background-color: rgba(255, 255, 255, 0);
-            vertical-align: central;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            text-align: center;
-            position: absolute;
-            width: 100%;
-            font-weight: normal;
-            background-color: rgba(255, 255, 255, 0.85);
-        }
 
-        ul.TrzyKolumnyList li a:hover h1 {
-            background-color: rgba(255, 255, 255, 0.85);
-        }
 
-        ul.TrzyKolumnyList li a img.kurs {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            z-index: -1;
-        }
 
-        ul.TrzyKolumnyList li a:hover img.kurs {
-        }
-
+    
 .manageHeader {
     margin-bottom: 30px;
 }
@@ -612,7 +540,7 @@ div.SekcjaHeader {
 
 
     #login-header div {
-        line-height: 40px;
+        line-height: 65px;
         padding-right: 15px;
         padding-top: 12px;
         color: #39312e;

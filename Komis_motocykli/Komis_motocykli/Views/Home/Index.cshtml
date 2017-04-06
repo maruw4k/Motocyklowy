@@ -23,10 +23,12 @@
                     </a>
                     <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = nowe.MotocyklId})">
                         <div class="newFlag"></div>
-                        <img class="kurs" src="@Url.ObrazkiSciezka(nowe.NazwaPlikuObrazka)" />
+                        <img class="motocykl" src="@Url.ObrazkiSciezka(nowe.NazwaPlikuObrazka)" />
                         <h1>
-                            @nowe.NazwaMotoru - @nowe.CenaMotoru
+                            @nowe.NazwaMotoru
                         </h1>
+                        
+                        <h2 class="motor-prize">@nowe.CenaMotoru</h2>
                     </a>
                 </article>
             </li>
@@ -45,7 +47,7 @@
                     </a>
                     <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = uzywane.MotocyklId})">
 
-                        <img class="kurs" src="@Url.ObrazkiSciezka(uzywane.NazwaPlikuObrazka)" />
+                        <img class="motocykl" src="@Url.ObrazkiSciezka(uzywane.NazwaPlikuObrazka)" />
                         <h1>
                             @uzywane.NazwaMotoru - @uzywane.CenaMotoru
                         </h1>

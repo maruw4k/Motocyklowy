@@ -47,8 +47,8 @@
                                     {
                                         <li>
                                             <article>
-                                                <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Kursy", new { id = pozycjaZamowienia.MotocyklId })">
-                                                    <img class="kurs" src="@Url.Content("~/Content/Kursy/" + pozycjaZamowienia.motocykl.NazwaPlikuObrazka)" />
+                                                <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = pozycjaZamowienia.MotocyklId })">
+                                                    <img class="motocykl" src="@Url.Content("~/Content/Motocykle/" + pozycjaZamowienia.motocykl.NazwaPlikuObrazka)" />
                                                     <h1>
                                                         @pozycjaZamowienia.motocykl.NazwaMotoru - @pozycjaZamowienia.motocykl.Pojemnosc<br />
                                                         <strong>sztuk: @pozycjaZamowienia.Ilosc, łącznie: @(pozycjaZamowienia.Ilosc * @pozycjaZamowienia.CenaZakupu)  zł</strong>
