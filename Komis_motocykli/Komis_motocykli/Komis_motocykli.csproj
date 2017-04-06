@@ -149,6 +149,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\arrow1.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -177,6 +178,7 @@
     <Content Include="Content\Kategorie\javascript.png" />
     <Content Include="Content\Kategorie\jquery.png" />
     <Content Include="Content\Kategorie\xml.png" />
+    <Content Include="Scripts\menuList.js" />
     <Content Include="Content\Motory\obrazekaspnet.png" />
     <Content Include="Content\Motory\obrazekcsharp.png" />
     <Content Include="Content\Motory\obrazekcss.png" />
@@ -186,7 +188,6 @@
     <Content Include="Content\Motory\obrazekmvc.png" />
     <Content Include="Content\Motory\obrazekmvc2.png" />
     <Content Include="Content\Motory\obrazekxml.png" />
-    <Content Include="Content\Prototype.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />

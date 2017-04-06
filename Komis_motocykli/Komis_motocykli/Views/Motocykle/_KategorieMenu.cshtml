@@ -1,20 +1,21 @@
 ﻿@model IEnumerable<Komis_motocykli.Models.Kategoria>
-    @using Komis_motocykli.Infrastructure
+@using Komis_motocykli.Infrastructure
 
 <nav class="KategorieVertical">
+
     <ul>
         
-            @foreach (var kategoria in Model)
+        @foreach (var kategoria in Model)
             {
-                <li>
-                    <a href="@Url.Action("Lista", "Motocykle", new { nazwaKategori = kategoria.NazwaKategorii.ToString() })"
-                       @*style="background-image: url(@Url.IkonyKategoriSciezka(kategoria.NazwaPlikuIkony); "*@>
+            <li>
+                <a href="@Url.Action("Lista", "Motocykle", new { nazwaKategori = kategoria.NazwaKategorii.ToString() })"
+                   @*style="background-image: url(@Url.IkonyKategoriSciezka(kategoria.NazwaPlikuIkony); "*@>
 
-                        @kategoria.NazwaKategorii
-                    </a>
-                </li>
-            }
-                
+                    @kategoria.NazwaKategorii
+                </a>
+            </li>
+        }
+
 
     </ul>
 </nav>

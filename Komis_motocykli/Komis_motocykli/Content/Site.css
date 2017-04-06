@@ -1,109 +1,115 @@
-﻿html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+﻿body {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #4d4d4d;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+    box-sizing: border-box;
 }
 
-body {
-    line-height: 1;
+
+
+
+.container {
+    background-color: #fff;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-input, select, textarea, button {
-    font-family: inherit;
+.page-header {
+    max-width: 1300px;
+    margin: 0 auto 30px auto;
+    height: 60px;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
+
+
+
+
+footer {
+    color: #777777;
+    background-color: #383838;
+    padding: 12px;
+    clear: both;
 }
 
-    nav ul {
-        list-style: none;
-    }
 
-blockquote, q {
-    quotes: none;
+
+.menu-item
+{
+    float: left;
 }
 
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-        content: '';
-        content: none;
-    }
-
-a {
+.logo {
     margin: 0;
+    margin-top: 30px;
     padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+    padding-right: 30px;
+    float: left;
+    font-size: 30px;
+    color: inherit;
 }
 
-/* change colours to suit your needs */
-ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none;
+.page-header a {
+    margin-top: 35px;
+    margin-right: 10px;
 }
 
-/* change colours to suit your needs */
-mark {
-    background-color: #ff9;
-    color: #000;
-    font-style: italic;
-    font-weight: bold;
+
+
+
+
+#page-nav {
+    float: left;
+
 }
 
-del {
-    text-decoration: line-through;
+
+nav.KategorieVertical {
+    margin-top: 80px;
+    text-align: center;
+    width: 20%;
+    float: left;
 }
 
-abbr[title], dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
+
+#KategorieListPrawaSekcja {
+    margin-top: 80px;
+    width: 80%;
+    float: right;
+}
+nav.KategorieVertical ul li{
+    margin-bottom: 25px;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 
-/* change border colour to suit your needs */
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #DADADA;
-    margin: 1em 0;
+
+
+ul {
     padding: 0;
+    list-style: none;
 }
 
-input, select {
-    vertical-align: middle;
+
+
+
+footer div {
+    text-align: center;
 }
 
-/* Main page styles */
 
-body {
-    width: 1000px;
-    margin: auto;
-    font-family: 'Segoe UI';
-}
+
+
+
+
+
+
+
 
 a:hover, a:visited, a:link, a:active {
     text-decoration: none;
@@ -111,17 +117,13 @@ a:hover, a:visited, a:link, a:active {
 }
 
 
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .hidden {
     display: none;
@@ -135,6 +137,7 @@ a:hover, a:visited, a:link, a:active {
     width: 143px;
     height: 42px;
     background-color: #0a5d7c;
+    background-image: url(../Content/Images/koszyk_white.png) ;
     color: white;
     float: right;
     line-height: 40px;
@@ -148,33 +151,26 @@ a:hover, a:visited, a:link, a:active {
         height: 42px;
         background-color: #585858;
         float: right;
-        background-image: url(../Content/Images/koszyk_white.png);
+        
         background-repeat: no-repeat;
         background-position: center;
     }
 
-#indexHeaderLogo {
-    margin-top: 25px;
-    margin-bottom: 35px;
-    display: block;
-}
 
-#baner{
-    vertical-align: top;
-}
+
 
 nav.kategorieHorizontal ul {
     overflow: hidden;
     border-left: 1px solid #E5E5E5;
     border-top: 1px solid #E5E5E5;
-    font-size: 18px;
+    
     font-family: 'Segoe UI Semibold', 'Segoe WP', 'Segoe UI';
 }
 
     nav.kategorieHorizontal ul li {
         margin: auto;
         float: left;
-        width: 332px;
+        
         /*padding-left: 50px;*/
         height: 54px;
         text-align: left;
@@ -184,7 +180,7 @@ nav.kategorieHorizontal ul {
     }
 
         nav.kategorieHorizontal ul li a {
-            width: 100%;
+            
             display: block;
             height: 100%;
             padding-left: 127px;
@@ -201,37 +197,16 @@ nav.kategorieHorizontal ul {
 
 
 #ListaKategoriZawartosc {
+    margin-bottom: 30px;
     overflow: hidden;
 }
 
-#KategorieListPrawaSekcja {
-    float: left;
-    margin-left: 29px;
-}
-
-#Breadcrumb {
-    height: 28px;
-    font-size: 14px;
-}
-
-    #Breadcrumb a {
-        margin-left: 5px;
-        width: 200px;
-    }
 
 
-nav.KategorieVertical {
-    width: 202px;
-    font-size: 18px;
-    font-family: 'Segoe UI Semibold', 'Segoe WP', 'Segoe UI';
-    border-right: 1px solid #E5E5E5;
-    float: left;
-}
 
-    nav.KategorieVertical ul li {
-        height: 50px;
-        line-height: 50px;
-    }
+
+
+
 
         nav.KategorieVertical ul li:hover {
             background-color: #EBEBEB;
@@ -241,7 +216,6 @@ nav.KategorieVertical {
             width: 100%;
             display: block;
             height: 100%;
-            padding-left: 75px;
             background-repeat: no-repeat;
             background-position-x: 5px;
             background-position-y: 50%;
@@ -389,8 +363,8 @@ nav.KategorieVertical {
 }
 
 ul.duzaListaKursy li {
-    width: 333.33px;
-    height: 333.33px;
+    width: 240px;
+    height: 240px;
 }
 
     ul.duzaListaKursy li a h1 {
@@ -622,23 +596,7 @@ div.newFlag {
     left: 0;
 }
 
-div.bestsellerFlag {
-    background-image: url(Images/bestseller.png);
-    background-repeat: no-repeat;
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
-.SekcjaKoszyk {
-    width: 748px;
-    float: left;
-    margin-top: 30px;
-    padding-left: 20px;
-}
 
 div.SekcjaHeader {
     border-bottom: 1px solid #DADADA;
@@ -701,301 +659,6 @@ div.SekcjaHeader {
                 text-align: center;
             }
 
-#koszyk-empty-message {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.SekcjaPrzyciski {
-    overflow: hidden;
-}
-
-    .SekcjaPrzyciski :nth-child(1) {
-        float: left;
-    }
-
-    .SekcjaPrzyciski :nth-child(2) {
-        float: right;
-    }
-
-#CenaCalkowita {
-    width: 100%;
-    text-align: right;
-    margin-top: 25px;
-    margin-bottom: 60px;
-    font-family: 'Segoe UI SemiBold';
-    font-size: 18px;
-}
-
-.PrzyciskLink {
-    height: 40px;
-    background-color: #0a5d7c;
-    color: #dfdfdf;
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 38px;
-    padding: 2px 15px 2px 15px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-input.PrzyciskLink {
-    border: 0;
-    line-height: 38px;
-    height: 44px;
-    cursor: pointer;
-}
-
-a.PrzyciskLink:visited, a.PrzyciskLink:link, a.PrzyciskLink:active {
-    color: #dfdfdf;
-}
-
-#checkout-address-table {
-    margin-left: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-style: none;
-}
-
-    #checkout-address-table tr {
-        height: 40px;
-    }
-
-        #checkout-address-table tr td {
-            vertical-align: middle;
-        }
-
-            #checkout-address-table tr td:first-child {
-                padding-right: 50px;
-                vertical-align: middle;
-            }
-
-            #checkout-address-table tr td:nth-child(2) {
-                vertical-align: middle;
-            }
-
-            #checkout-address-table tr td:nth-child(3) {
-                padding-left: 10px;
-                font-size: 15px;
-                color: red;
-            }
-
-    #checkout-address-table input {
-        border: 1px solid gray;
-        width: 250px;
-        height: 20px;
-        padding: 5px;
-    }
-
-    #checkout-address-table textarea {
-        width: 250px;
-        border: 1px solid gray;
-        padding: 5px;
-        margin-top: 5px;
-    }
-
-#userdata-address-table {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-style: none;
-}
-
-    #userdata-address-table tr {
-        height: 40px;
-    }
-
-        #userdata-address-table tr td {
-            vertical-align: middle;
-        }
-
-            #userdata-address-table tr td:first-child {
-                padding-right: 50px;
-                vertical-align: middle;
-            }
-
-            #userdata-address-table tr td:nth-child(2) {
-                vertical-align: middle;
-            }
-
-            #userdata-address-table tr td:nth-child(3) {
-                padding-left: 10px;
-                font-size: 15px;
-                color: red;
-            }
-
-    #userdata-address-table input {
-        border: 1px solid gray;
-        width: 250px;
-        height: 20px;
-        padding: 5px;
-    }
-
-    #userdata-address-table textarea {
-        width: 250px;
-        border: 1px solid gray;
-        padding: 5px;
-        margin-top: 5px;
-    }
-
-#albumedit-address-table {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-style: none;
-}
-
-    #albumedit-address-table tr {
-        height: 40px;
-    }
-
-        #albumedit-address-table tr td {
-            vertical-align: middle;
-        }
-
-            #albumedit-address-table tr td:first-child {
-                padding-right: 50px;
-                vertical-align: middle;
-            }
-
-            #albumedit-address-table tr td:nth-child(2) {
-                vertical-align: middle;
-            }
-
-            #albumedit-address-table tr td:nth-child(3) {
-                padding-left: 10px;
-                font-size: 15px;
-                color: red;
-            }
-
-    #albumedit-address-table input {
-        border: 1px solid gray;
-        width: 250px;
-        height: 20px;
-        padding: 5px;
-    }
-
-    #albumedit-address-table textarea {
-        width: 250px;
-        border: 1px solid gray;
-        padding: 5px;
-        margin-top: 5px;
-    }
-
-    #albumedit-address-table select {
-        width: 100%;
-        height: 30px;
-    }
-
-div.upload {
-    width: 157px;
-    height: 57px;
-    background: url(Images/upload.png);
-    overflow: hidden;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
-
-div.upload input {
-    display: block !important;
-    width: 157px !important;
-    height: 57px !important;
-    opacity: 0 !important;
-    overflow: hidden !important;
-}
-
-#login-error {
-    color: red;
-    margin-top: 25px;
-    text-align: center;
-}
-
-
-    #login-error .validation-summary-errors li {
-        list-style-type: none;
-        font-size: 14px;
-    }
-
-.error-summary-centered{
-    text-align: center;
-}
-
-.error-summary-centered .validation-summary-errors li {
-        list-style-type: none;
-        font-size: 14px;
-    }
-
-#login-table {
-    margin-left: 20px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    border-style: none;
-}
-
-    #login-table tr {
-        height: 40px;
-    }
-
-        #login-table tr td {
-            vertical-align: middle;
-        }
-
-        #login-table tr:not(:nth-child(3)) td:first-child {
-            padding-right: 50px;
-            vertical-align: middle;
-        }
-
-        #login-table tr td:nth-child(2) {
-            vertical-align: middle;
-        }
-
-        #login-table tr td:nth-child(3) {
-            padding-left: 10px;
-            font-size: 15px;
-            color: red;
-        }
-
-        #login-table tr:nth-child(3) td {
-            text-align: right;
-            padding: 10px;
-        }
-
-    #login-table input {
-        border: 1px solid gray;
-        width: 250px;
-        height: 20px;
-        padding: 5px;
-    }
-
-        #login-table input[type=checkbox] {
-            width: 40px;
-        }
-
-    #login-table textarea {
-        width: 250px;
-        border: 1px solid gray;
-        padding: 5px;
-        margin-top: 5px;
-    }
-
-    #login-table .login-validation-message {
-        margin-bottom: 7px;
-        color: red !important;
-        font-size: 14px;
-    }
-
-    #login-table .text-danger {
-        text-decoration: none;
-    }
 
 #login-header {
 }
@@ -1008,164 +671,56 @@ div.upload input {
         float: right;
     }
 
-#password-table {
-    margin-left: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-style: none;
+
+
+
+#KursCena {
+    overflow: hidden;
 }
 
-    #password-table tr {
-        height: 40px;
-    }
-
-        #password-table tr td {
-            vertical-align: middle;
-        }
-
-        #password-table tr:not(:nth-child(3)) td:first-child {
-            padding-right: 50px;
-            vertical-align: middle;
-        }
-
-        #password-table tr td:nth-child(2) {
-            vertical-align: middle;
-        }
-
-        #password-table tr td:nth-child(3) {
-            padding-left: 10px;
-            font-size: 15px;
-            color: red;
-        }
-
-    #password-table input {
-        border: 1px solid gray;
-        width: 250px;
-        height: 20px;
-        padding: 5px;
-    }
-
-        #password-table input[type=checkbox] {
-            width: 40px;
-        }
-
-    #password-table textarea {
-        width: 250px;
-        border: 1px solid gray;
-        padding: 5px;
-        margin-top: 5px;
-    }
-
-    #password-table .login-validation-message {
-        margin-bottom: 7px;
-        color: red !important;
-        font-size: 14px;
-    }
-
-    #password-table .text-danger {
-        text-decoration: none;
-    }
-
-.manage-error {
-    color: red;
-    margin-top: 25px;
-    text-align: center;
-}
-
-    .manage-error .validation-summary-errors li {
-        list-style-type: none;
-        font-size: 14px;
-    }
-
-.manage-message {
-    color: darkgreen;
-    margin-top: 25px;
-    text-align: center;
-}
-
- .manageLink {
-            height: 42px;
-            float: left;
-            line-height: 40px;
-            font-size: 14px;
-            padding-left: 40px;
-            padding-right: 10px;
-            background-color: #0a5d7c;
-            color: white;
-        }
-
-a.manageLink, a.manageLink:hover, a.manageLink:visited {
-            color: white;
-        }
-
-.SekcjaKoszyk .validation-summary-errors {
-    color: red;
-    margin-left: 30px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-}
-
-footer {
-    width: 100%;
-    height: 42px;
-    background-color: #0a5d7c;
-    margin-top: 75px;
-    /*overflow: hidden;*/
-}
-
-    footer nav {
-        display: table;
-        overflow: hidden;
-        height: 100%;
+    #KursCena > div {
         float: left;
+        width: 332px;
+        height: 67px;
+        text-align: center;
+        background-color: #0a5d7c;
+        color: white;
+        font-size: 56px;
+        line-height: 56px;
+        font-weight: normal;
     }
 
-        footer nav ul {
-            display: table-cell;
-            vertical-align: middle;
+        #KursCena > div > span {
+            font-size: 19px;
+            font-family: 'Segoe UI Light';
+            margin-left: 5px;
         }
 
-            footer nav ul li {
-                font-size: 14px;
-                color: white;
-                float: left;
-                margin-left: 55px;
-            }
-
-                footer nav ul li a, footer nav ul li a:hover, footer nav ul li a:visited, footer nav ul li a:active, footer nav ul li a:link {
-                    color: white;
-                }
-
-                    footer nav ul li a:hover {
-                        text-decoration: underline;
-                        color: white;
-                    }
-
-                    footer nav ul li a:visited {
-                        color: white;
-                    }
-
-    footer #footerLogo {
-        float: right;
-        margin-top: 8px;
-    }
-
-    footer #footerCopyright {
-        width: 215px;
-        float: right;
+    #KursCena > a {
+        float: left;
+        width: 73px;
+        height: 67px;
         background-color: #0a5d7c;
-        line-height: 42px;
-        height: 100%;
-        font-size: 14px;
-        color: white;
-        padding-left: 15px;
+        background-image: url(../Content/Images/koszyk-details.png);
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
-.submitLink {
-    background-color: transparent;
-    border: none !important;
-    color: black;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: right;
+#KursOpis {
+    font-size: 18px;
+    line-height: 22px;
+    color: #39312E;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+#KursInfo {
+    font-size: 18px;
+    line-height: 22px;
+    color: #39312E;
+    margin-top: 40px;
+    text-align: justify;
+    border-top: 1px solid #E5E5E5;
+    padding-top: 40px;
 }

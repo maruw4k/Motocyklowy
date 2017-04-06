@@ -1,27 +1,25 @@
 ﻿@model IEnumerable<Komis_motocykli.Models.Motocykl>
 @using Komis_motocykli.Infrastructure
 
-<ul class="">
-    @foreach (var motocykl in Model)
-           {
-        <li>
-            <article>
-                <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka", "Koszyk", new { id = motocykl.MotocyklId})">
-                    <img src="@Url.Content("~/Content/Images/koszyk.png")" />
-                </a>
+<section>
+    <ul class="KursyTrzyKolumny duzaListaKursy">
+        @foreach (var motocykl in Model)
+            {
+            <li>
+                <article>
+                    <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = motocykl.MotocyklId})">
+                        <img src="../Content/Images/koszyk.png" />
+                    </a>
+                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = motocykl.MotocyklId})">
 
-                @if (motocykl.Uzywany)
-                {
-                   // <div class="bestsellerFlag"></div>
-                }
+                        <img class="kurs" src="@Url.ObrazkiSciezka(motocykl.NazwaPlikuObrazka)" />
+                        <h1>
+                            @motocykl.NazwaMotoru - @motocykl.CenaMotoru
+                        </h1>
+                    </a>
+                </article>
+            </li>
+        }
+    </ul>
+</section>
 
-                <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = motocykl.MotocyklId } )">
-                    <img class="kurs" src="@Url.ObrazkiSciezka(motocykl.NazwaPlikuObrazka)" />
-                    <h1>
-                        @motocykl.NazwaMotoru - @motocykl.RokProdukcji
-                    </h1>
-                </a>
-            </article>
-        </li>
-    }
-</ul>

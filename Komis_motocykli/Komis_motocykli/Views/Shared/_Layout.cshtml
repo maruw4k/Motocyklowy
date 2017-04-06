@@ -6,44 +6,46 @@
     @System.Web.Optimization.Styles.Render("~/Content/themes/base/css")
 </head>
 <body>
-    <header>
-        <div style="overflow: hidden;">
-            <a id="koszykHeaderLink" href="@Url.Action("Index", "Koszyk")">
-                Koszyk (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)
-                <span></span>
-            </a>
+    
+        <header class="page-header">
+            
+                <a id="indexHeaderLogo" href="@Url.Content("~/")">
+                    <h1 class="logo">Komis motorowy</h1>
+                </a>
+                    <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Onas" })" style="">O nas</a>
+                    <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a>
+                   
 
-            @Html.Partial("_LoginPartial")
+     
 
-            <a id="indexHeaderLogo" href="@Url.Content("~/")">
-                <h1 class="center">Komis motorowy</h1>
-            </a>
-        </div>
-    </header>
 
-    <div>
-        @RenderBody()
-    </div>
+                <a id="koszykHeaderLink" href="@Url.Action("Index", "Koszyk")">
+                    Koszyk (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)
+                    <img src="../Content/Images/koszyk_white.png" alt="Alternate Text" />
+                    <span></span>
+                </a>
 
-    <footer>
-        <nav>
-            <ul>
-                @*alternatywny sposób*@
-                <li>@Html.ActionLink("Onas", "StronyStatyczne", "Home", new { nazwa = "O nas" }, null)</li>          
-                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Oferta" })" style="">Oferta</a></li>
-                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a></li>
-                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Logowanie" })" style="">Logowanie</a></li>
-                <li><a href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Rejestracja" })" style="">Rejestracja</a></li>
+                @Html.Partial("_LoginPartial")
 
-            </ul>
-        </nav>
-       
-        <div>
-            Copyright &copy; 2017 Krzeszo
-        </div>
-    </footer>
+        </header>
 
-    @RenderSection("Scripts", required: false)
 
+        <div class="container">
+            @RenderBody()
+        
+            <div class="container">
+                <footer>
+
+
+                    <div>
+                        Copyright &copy; 2017 Krzeszo
+                    </div>
+                </footer>
+            </div>
+
+                @RenderSection("Scripts", required: false)
+            </div>
+
+    
 </body>
 </html>

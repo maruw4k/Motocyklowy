@@ -3,66 +3,59 @@
 
 @{
     ViewBag.Title = "Komis motocykli";
+    Layout = "~/Views/Shared/_RightSectionLayout.cshtml";
 }
 
-<nav class="kategorieHorizontal">
-    <ul>
-        @foreach (var kategoria in Model.Kategorie)
+
+
+
+<div class="motorbike-grid">
+    <section>
+
+
+        <ul class="KursyTrzyKolumny duzaListaKursy">
+            @foreach (var nowe in Model.Nowe)
             {
-            <li>
-                <a href="@Url.Action("Lista", "Motocykle", new {nazwaKategori = kategoria.NazwaKategorii.ToLower()} )"
-                   style="background-image: url(../Content/Kategorie/aspnet.png); ">
-                   @kategoria.NazwaKategorii
-                </a>
-            </li>
-        }
-    </ul>
+                <li>
+                    <article>
+                        <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = nowe.MotocyklId})">
+                            <img src="../Content/Images/koszyk.png" />
+                        </a>
+                        <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = nowe.MotocyklId})">
+                            <div class="newFlag"></div>
+                            <img class="kurs" src="@Url.ObrazkiSciezka(nowe.NazwaPlikuObrazka)" />
+                            <h1>
+                                @nowe.NazwaMotoru - @nowe.CenaMotoru
+                            </h1>
+                        </a>
+                    </article>
+                </li>
+            }
+        </ul>
+    </section>
 
-</nav>
+    <section>
+        <ul class="KursyTrzyKolumny duzaListaKursy">
+            @foreach (var uzywane in Model.Uzywane)
+            {
+                <li>
+                    <article>
+                        <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = uzywane.MotocyklId})">
+                            <img src="../Content/Images/koszyk.png" />
+                        </a>
+                        <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = uzywane.MotocyklId})">
 
-<section>
-    <ul class="KursyTrzyKolumny duzaListaKursy">
-        @foreach (var nowe in Model.Nowe)
-        {
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = nowe.MotocyklId})">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = nowe.MotocyklId})">
-                        <div class="newFlag"></div>
-                        <img class="kurs" src="@Url.ObrazkiSciezka(nowe.NazwaPlikuObrazka)" />
-                        <h1>
-                            @nowe.NazwaMotoru - @nowe.CenaMotoru
-                        </h1>
-                    </a>
-                </article>
-            </li>
-        }
-    </ul>
-</section>
-
-<section>
-    <ul class="KursyTrzyKolumny duzaListaKursy">
-        @foreach (var uzywane in Model.Uzywane)
-        {
-            <li>
-                <article>
-                    <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = uzywane.MotocyklId})">
-                        <img src="../Content/Images/koszyk.png" />
-                    </a>
-                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = uzywane.MotocyklId})">
-                    
-                        <img class="kurs" src="@Url.ObrazkiSciezka(uzywane.NazwaPlikuObrazka)" />
-                        <h1>
-                            @uzywane.NazwaMotoru - @uzywane.CenaMotoru
-                        </h1>
-                    </a>
-                </article>
-            </li>
-        }
-    </ul>
-</section>
+                            <img class="kurs" src="@Url.ObrazkiSciezka(uzywane.NazwaPlikuObrazka)" />
+                            <h1>
+                                @uzywane.NazwaMotoru - @uzywane.CenaMotoru
+                            </h1>
+                        </a>
+                    </article>
+                </li>
+            }
+        </ul>
+    </section>
+</div>
 
 
 
