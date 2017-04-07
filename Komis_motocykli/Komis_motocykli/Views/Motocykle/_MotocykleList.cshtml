@@ -4,7 +4,7 @@
 
 <div id="SekcjaListaKategori">
     <section>
-        <ul class="KursyTrzyKolumny duzaListaKursy">
+        <ul class="MotoKolumny duzaListaMotocykle">
             @foreach (var motocykl in Model)
             {
                 <li>
@@ -12,7 +12,7 @@
                         <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = motocykl.MotocyklId})">
                             <img src="../Content/Images/koszyk.png" />
                         </a>
-                        <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = motocykl.MotocyklId})">
+                        <a class="komisSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = motocykl.MotocyklId})">
 
                             <img class="motocykl" src="@Url.ObrazkiSciezka(motocykl.NazwaPlikuObrazka)" />
                             <h1>

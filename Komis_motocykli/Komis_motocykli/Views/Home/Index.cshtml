@@ -13,7 +13,7 @@
 <section>
 
 
-    <ul class="KursyTrzyKolumny duzaListaKursy">
+    <ul class="MotoKolumny duzaListaMotocykle">
         @foreach (var nowe in Model.Nowe)
             {
             <li>
@@ -21,7 +21,7 @@
                     <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = nowe.MotocyklId})">
                         <img src="../Content/Images/koszyk.png" />
                     </a>
-                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = nowe.MotocyklId})">
+                    <a class="komisSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = nowe.MotocyklId})">
                         <div class="newFlag"></div>
                         <img class="motocykl" src="@Url.ObrazkiSciezka(nowe.NazwaPlikuObrazka)" />
                         <h1>
@@ -35,7 +35,7 @@
 </section>
 
 <section>
-    <ul class="KursyTrzyKolumny duzaListaKursy">
+    <ul class="MotoKolumny duzaListaMotocykle">
         @foreach (var uzywane in Model.Uzywane)
             {
             <li>
@@ -43,7 +43,7 @@
                     <a class="dodajDoKoszykaLink" href="@Url.Action("DodajDoKoszyka","Koszyk", new { id = uzywane.MotocyklId})">
                         <img src="../Content/Images/koszyk.png" />
                     </a>
-                    <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = uzywane.MotocyklId})">
+                    <a class="komisSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = uzywane.MotocyklId})">
 
                         <img class="motocykl" src="@Url.ObrazkiSciezka(uzywane.NazwaPlikuObrazka)" />
                         <h1>

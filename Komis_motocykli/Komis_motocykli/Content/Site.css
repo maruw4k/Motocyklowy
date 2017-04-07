@@ -77,7 +77,8 @@ nav.KategorieVertical {
     width: 80%;
     float: right;
 }
-nav.KategorieVertical ul li{
+
+nav.KategorieVertical ul li {
     margin-bottom: 25px;
 }
 
@@ -112,7 +113,6 @@ a:hover, a:visited, a:link, a:active {
 
 .center {
     text-align: center;
-    
     margin-left: auto;
     margin-right: auto;
 }
@@ -145,28 +145,28 @@ a:hover, a:visited, a:link, a:active {
 
 
 
-        nav.KategorieVertical ul li a {
-            width: 100%;
-            display: block;
-            height: 100%;
-            background-repeat: no-repeat;
-            background-position-x: 5px;
-            background-position-y: 50%;
-        }
+nav.KategorieVertical ul li a {
+    width: 100%;
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 50%;
+}
 
-#SekcjaKurs {
+#Sekcja {
     width: 768px;
     float: left;
     margin-top: 20px;
 }
 
-#KursLewa {
+#KomisLewa {
     width: 335px;
     float: left;
     margin-right: 28px;
 }
 
-    #KursLewa img {
+    #KomisLewa img {
         height: 335px;
         float: left;
         display: block;
@@ -175,17 +175,16 @@ a:hover, a:visited, a:link, a:active {
     }
 
 
-#KursPrawa {
+#KomisPrawa {
     float: left;
     width: 405px;
 }
 
-    #KursPrawa #KursNazwa {
+    #KomisPrawa #KomisNazwa {
         border: 5px solid #4d4d4d;
-        
     }
 
-        #KursPrawa #KursNazwa > h1 {
+        #KomisPrawa #KomisNazwa > h1 {
             margin-top: 20px;
             font-family: 'Segoe UI Light';
             font-size: 38px;
@@ -195,7 +194,7 @@ a:hover, a:visited, a:link, a:active {
             text-align: center;
         }
 
-        #KursPrawa #KursNazwa > h2 {
+        #KomisPrawa #KomisNazwa > h2 {
             margin-top: 15px;
             margin-bottom: 20px;
             font-size: 20px;
@@ -211,21 +210,21 @@ a:hover, a:visited, a:link, a:active {
     width: 100%;
 }
 
-ul.duzaListaKursy li {
+ul.duzaListaMotocykle li {
     width: 230px;
     height: 230px;
 }
 
-    ul.duzaListaKursy li a h1 {
+    ul.duzaListaMotocykle li a h1 {
         top: 65%;
     }
 
-    ul.duzaListaKursy li a:hover h1 {
+    ul.duzaListaMotocykle li a:hover h1 {
         top: 46%;
     }
 
 
-ul.KursyTrzyKolumny {
+ul.MotoKolumny {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -233,34 +232,34 @@ ul.KursyTrzyKolumny {
     list-style-type: none;
 }
 
-    ul.KursyTrzyKolumny li {
+    ul.MotoKolumny li {
         float: left;
         position: relative;
         /*opacity: 0.2;*/
     }
 
-        ul.KursyTrzyKolumny li article {
+        ul.MotoKolumny li article {
             height: 100%;
         }
 
-        ul.KursyTrzyKolumny li a.dodajDoKoszykaLink {
+        ul.MotoKolumny li a.dodajDoKoszykaLink {
             position: absolute;
             right: 0;
             bottom: 0;
         }
 
-            ul.KursyTrzyKolumny li a.dodajDoKoszykaLink img {
+            ul.MotoKolumny li a.dodajDoKoszykaLink img {
                 z-index: 2;
                 position: relative;
                 vertical-align: top;
             }
 
-        ul.KursyTrzyKolumny li a.kursSzczegolyLink {
+        ul.MotoKolumny li a.komisSzczegolyLink {
             display: block;
             height: 100%;
         }
 
-        ul.KursyTrzyKolumny li a h1 {
+        ul.MotoKolumny li a h1 {
             background-color: rgba(255, 255, 255, 0.2);
             vertical-align: central;
             padding-top: 10px;
@@ -269,15 +268,13 @@ ul.KursyTrzyKolumny {
             position: absolute;
             width: 100%;
             font-weight: normal;
-            /* More intensive album title */
-            /* font-family: 'Segoe UI Semibold', 'Segoe WP', 'Segoe UI'; */
             -webkit-transition: all 1s ease;
             -o-transition: all 1s ease;
             -moz-transition: all 1s ease;
             transition: all 1s ease;
         }
 
-        ul.KursyTrzyKolumny li a:hover h1 {
+        ul.MotoKolumny li a:hover h1 {
             background-color: rgba(255, 255, 255, 0.85);
             -webkit-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;
@@ -285,8 +282,7 @@ ul.KursyTrzyKolumny {
             transition: all 0.5s ease;
         }
 
-        ul.KursyTrzyKolumny li a img.motocykl {
-
+        ul.MotoKolumny li a img.motocykl {
             width: 100%;
             height: auto;
             z-index: -1;
@@ -296,7 +292,7 @@ ul.KursyTrzyKolumny {
             transition: opacity 0.5s ease;
         }
 
-        ul.KursyTrzyKolumny li a:hover img.motocykl {
+        ul.MotoKolumny li a:hover img.motocykl {
             opacity: 0.8;
             -webkit-transition: opacity 1s ease;
             -o-transition: opacity 1s ease;
@@ -343,7 +339,6 @@ div.newFlag {
 
 
 div.SekcjaHeader {
-    
     margin-bottom: 25px;
 }
 
@@ -405,14 +400,14 @@ div.SekcjaHeader {
 
 
 
-    #login-header div {
-        line-height: 65px;
-        padding-right: 15px;
-        padding-top: 12px;
-        color: #39312e;
-        font-size: 12pt;
-        float: right;
-    }
+#login-header div {
+    line-height: 65px;
+    padding-right: 15px;
+    padding-top: 12px;
+    color: #39312e;
+    font-size: 12pt;
+    float: right;
+}
 
 
 
@@ -446,16 +441,14 @@ div.SekcjaHeader {
     width: 20%;
 }
 
-   .button > a > img {
+    .button > a > img {
         width: 50%;
         background-color: #0a5d7c;
-        
     }
 
 
 
 .motor-opis {
-    
     text-align: center;
     font-size: 18px;
     line-height: 22px;
@@ -465,7 +458,6 @@ div.SekcjaHeader {
 }
 
 .motor-info {
-   
     text-align: center;
     font-size: 18px;
     line-height: 22px;
@@ -474,4 +466,3 @@ div.SekcjaHeader {
     border-top: 1px solid #E5E5E5;
     padding-top: 40px;
 }
-

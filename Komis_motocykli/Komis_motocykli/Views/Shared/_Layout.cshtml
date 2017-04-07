@@ -14,13 +14,13 @@
             </a>
 
 
-            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Onas" })" style="">O nas</a>
-            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Pomoc" })" style="">Pomoc</a>
-            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })" style="">Regulamin</a>
+            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Onas" })" >O nas</a>
+            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Pomoc" })" >Pomoc</a>
+            <a class="menu-item" href="@Url.Action("StronyStatyczne", "Home", new { nazwa = "Regulamin" })">Regulamin</a>
 
             <a id="koszykHeaderLink" href="@Url.Action("Index", "Koszyk")">
                 <img class="basket-icon" src="../Content/Images/basket.png" alt="Ikona koszyka" />
-                 (<span id="koszyk-naglowek-ilosc-elementow">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)
+                 (<span>@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</span>)
                
                 
             </a>
