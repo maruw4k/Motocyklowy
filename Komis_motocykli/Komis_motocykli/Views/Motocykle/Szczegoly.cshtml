@@ -7,7 +7,7 @@
 }
 
 <div id="ListaKategoriZawartosc">
-    @Html.Action("KategorieMenu") 
+    @Html.Action("KategorieMenu")
     <div id="KategorieListPrawaSekcja">
 
 
@@ -25,15 +25,19 @@
                     </h2>
                 </div>
                 <div id="KursCena">
-                    <div>
-                        @Model.CenaMotoru<span>PLN</span>
+                    <div class="cena">
+                        @Model.CenaMotoru <span>PLN</span>
+
                     </div>
-                    <a href="@Url.Action("DodajDoKoszyka", "Koszyk", new { id = Model.MotocyklId} )"></a>
+                <div class="button">
+                    <a href="@Url.Action("DodajDoKoszyka", "Koszyk", new { id = Model.MotocyklId} )"><img src="~/Content/Images/basket2.png" alt="Alternate Text" /></a>
                 </div>
-                <div id="KursOpis">
+                </div>
+              
+                <div class="motor-opis">
                     @Model.OpisMotoru
                 </div>
-                <div id="KursInfo">
+                <div class="motor-info">
                     @Model.OpisSkrocony
                 </div>
 

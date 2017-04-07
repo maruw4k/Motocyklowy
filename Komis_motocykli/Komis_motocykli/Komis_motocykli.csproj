@@ -149,7 +149,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\basket.ico" />
     <Content Include="Content\Images\basket.png" />
+    <Content Include="Content\Images\basket2.png" />
     <Content Include="Content\Images\koszyk.png" />
     <Content Include="Content\Images\new.png" />
     <Content Include="Content\Images\searchlogo.png" />

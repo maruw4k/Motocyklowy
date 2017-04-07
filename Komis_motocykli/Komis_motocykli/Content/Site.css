@@ -235,7 +235,8 @@ a:hover, a:visited, a:link, a:active {
 }
 
     #KursPrawa #KursNazwa {
-        border: 5px solid #0a5d7c;
+        border: 5px solid #4d4d4d;
+        
     }
 
         #KursPrawa #KursNazwa > h1 {
@@ -550,12 +551,91 @@ div.SekcjaHeader {
 
 
 
-
 #KursCena {
     overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 67px;
+    text-align: center;
+    background-color: #0a5d7c;
+    color: white;
+    font-size: 56px;
+    line-height: 56px;
+    font-weight: normal;
 }
 
-    #KursCena > div {
+
+    /*#KursCena > div {
+        float: left;
+        width: 100%;
+        height: 67px;
+        text-align: center;
+        background-color: #0a5d7c;
+        color: white;
+        font-size: 56px;
+        line-height: 56px;
+        font-weight: normal;
+    }*/
+
+
+
+
+.cena {
+    line-height: 60px;
+    font-size: 60%;
+    width: 80%;
+}
+
+    .cena > span {
+        font-size: 40%;
+    }
+
+.button {
+    width: 20%;
+}
+
+   .button > a > img {
+        width: 50%;
+        background-color: #0a5d7c;
+        
+    }
+
+
+
+    /*#KursCena > a {
+        float: left;
+        width: 73px;
+        height: 67px;
+        background-color: #0a5d7c;
+        background-image: url(../Content/Images/basket2.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }*/
+
+.motor-opis {
+    
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    color: #39312E;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.motor-info {
+   
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    color: #39312E;
+    margin-top: 40px;
+    border-top: 1px solid #E5E5E5;
+    padding-top: 40px;
+}
+
+
+
+    /*#KursCena > div {
         float: left;
         width: 332px;
         height: 67px;
@@ -581,23 +661,5 @@ div.SekcjaHeader {
         background-image: url(../Content/Images/koszyk-details.png);
         background-repeat: no-repeat;
         background-position: center center;
-    }
+    }*/
 
-#KursOpis {
-    font-size: 18px;
-    line-height: 22px;
-    color: #39312E;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: justify;
-}
-
-#KursInfo {
-    font-size: 18px;
-    line-height: 22px;
-    color: #39312E;
-    margin-top: 40px;
-    text-align: justify;
-    border-top: 1px solid #E5E5E5;
-    padding-top: 40px;
-}

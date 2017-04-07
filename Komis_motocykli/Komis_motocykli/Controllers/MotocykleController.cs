@@ -24,7 +24,7 @@ namespace Komis_motocykli.Controllers
         {
             var kategoria = db.Kategorie.Include("Motocykle").Where(k => k.NazwaKategorii.ToUpper() == nazwaKategori.ToUpper()).Single();
             var motocykle = kategoria.Motocykle.Where(a => (searchQuery == null ||
-                                             a.NazwaMotoru.ToLower().Contains(searchQuery.ToLower())));
+                                             a.NazwaMotoru.ToLower().Contains(searchQuery.ToLower()) || (a.Pojemnosc).ToString().Contains(searchQuery.ToLower())));
 
             if (Request.IsAjaxRequest())
             {
@@ -55,13 +55,13 @@ namespace Komis_motocykli.Controllers
 
         public ActionResult MotocyklePodpowiedzi(string fraza)
         {
-            var motocykle = this.db.Motocykle.Where(a => a.NazwaMotoru.ToLower().Contains(fraza.ToLower()))
+            var motocykle = db.Motocykle.Where(a => a.NazwaMotoru.ToLower().Contains(fraza.ToLower()))
                 .Take(5).Select(a => new { label = a.NazwaMotoru });
 
             return Json(motocykle, JsonRequestBehavior.AllowGet);
         }
 
-
+       
 
     }
 }
