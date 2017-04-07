@@ -7,15 +7,18 @@
     <link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" />
 </head>
 <body>
-    <header>
+    <header class="page-header">
         <div style="overflow: hidden; margin-bottom: 30px;">
-            <a class="manageLink" href="@Url.Action("Index", "Home")">
-                Start
+
+            <a id="indexHeaderLogo" href="@Url.Content("~/")">
+                <h1 class="logo">Komis motorowy</h1>
             </a>
-            <a class="manageLink" href="@Url.Action("Index", "Manage")">
+
+            
+            <a class="menu-item" href="@Url.Action("Index", "Manage")">
                 Twoje dane
             </a>
-            <a class="manageLink" href="@Url.Action("ListaZamowien", "Manage")" style="width: 100px">
+            <a class="menu-item" href="@Url.Action("ListaZamowien", "Manage")">
                 Zamówienia
             </a>
 
@@ -29,7 +32,7 @@
        
     </header>
 
-    <div>
+    <div class="container">
         @RenderBody()
     </div>
 

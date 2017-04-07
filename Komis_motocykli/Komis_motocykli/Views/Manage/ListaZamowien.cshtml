@@ -6,9 +6,9 @@
 
 <div>
     <hr />
-    <h2 class="manageHeader">Twoje zamówienia</h2>
+    <h2 class="center">Twoje zamówienia</h2>
 
-    <div>
+    <div class="container">
         @if (Model.Any())
         {
             <table id="zamowienia-table">
@@ -41,14 +41,14 @@
                     <tr>
                         <td colspan="6">
                             <section>
-                                <ul class="TrzyKolumnyList duzaListaKursy-bottom">
+                                <ul class="">
 
                                     @foreach (var pozycjaZamowienia in zamowienie.PozycjeZamowienia)
                                     {
                                         <li>
                                             <article>
-                                                <a class="kursSzczegolyLink" href="@Url.Action("Szczegoly", "Motocykle", new { id = pozycjaZamowienia.MotocyklId })">
-                                                    <img class="motocykl" src="@Url.Content("~/Content/Motocykle/" + pozycjaZamowienia.motocykl.NazwaPlikuObrazka)" />
+                                                <a href="@Url.Action("Szczegoly", "Motocykle", new { id = pozycjaZamowienia.MotocyklId })">
+                                                    <img class="motocykl" style="width:50%; margin: auto;"src="@Url.Content("~/Content/Motocykle/" + pozycjaZamowienia.motocykl.NazwaPlikuObrazka)" />
                                                     <h1>
                                                         @pozycjaZamowienia.motocykl.NazwaMotoru - @pozycjaZamowienia.motocykl.Pojemnosc<br />
                                                         <strong>sztuk: @pozycjaZamowienia.Ilosc, łącznie: @(pozycjaZamowienia.Ilosc * @pozycjaZamowienia.CenaZakupu)  zł</strong>

@@ -5,14 +5,14 @@
 }
 
 <hr />
-<h2 style="margin-bottom: 30px">Twoje dane</h2>
+<h2 class="center">Twoje dane</h2>
 
 @using (@Html.BeginForm("ChangeProfile", "Manage"))
 {
     @Html.AntiForgeryToken()
 
-    <div style="text-align: center;">
-        <table id="userdata-address-table">
+    <div class="center">
+        <table id="userdata-address-table" class="center">
             <tr>
                 <td>@Html.LabelFor(o => o.DaneUzytkownika.Imie, "Imię:")</td>
                 <td>@Html.TextBoxFor(o => o.DaneUzytkownika.Imie)</td>
@@ -60,9 +60,9 @@
         </table>
     </div>
 }
-
+ 
 <hr />
-<h2 style="margin-bottom: 30px">Zmiana hasła</h2>
+<h2 class="center">Zmiana hasła</h2>
 
 @using (Html.BeginForm("ChangePassword", "Manage", FormMethod.Post))
 {
