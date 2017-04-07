@@ -1,6 +1,5 @@
 ﻿using Komis_motocykli.DAL;
 using Komis_motocykli.Models;
-using PraktyczneKursy.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

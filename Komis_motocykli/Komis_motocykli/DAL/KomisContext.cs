@@ -1,12 +1,7 @@
 ﻿using Komis_motocykli.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
-using PraktyczneKursy.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Web;
 
 namespace Komis_motocykli.DAL
 {

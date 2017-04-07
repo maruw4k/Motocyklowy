@@ -38,7 +38,7 @@
                             @pozycjaKoszyka.Motocykl.NazwaMotoru</a></td>
                         <td>Ilość: <span id="koszyk-ilosc-pozycji-@pozycjaKoszyka.Motocykl.MotocyklId">@pozycjaKoszyka.Ilosc</span></td>
                         <td>@pozycjaKoszyka.Wartosc</td>
-                        <td><a class="usunKurs" data-id="@pozycjaKoszyka.Motocykl.MotocyklId" href="#">Usuń</a></td>
+                        <td><a class="usunKomis" data-id="@pozycjaKoszyka.Motocykl.MotocyklId" href="#">Usuń</a></td>
                     </tr>
                 }
 
@@ -71,7 +71,7 @@
  
 <script type="text/javascript">
         $(function () {
-            $(".usunKurs").click(function () {
+            $(".usunKomis").click(function () {
                 var recordDoUsuniecia = $(this).attr("data-id");
 
                 if (recordDoUsuniecia != '') {

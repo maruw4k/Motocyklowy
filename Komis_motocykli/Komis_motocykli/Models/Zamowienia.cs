@@ -1,4 +1,4 @@
-﻿using PraktyczneKursy.Models;
+﻿using Komis_motocykli.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
