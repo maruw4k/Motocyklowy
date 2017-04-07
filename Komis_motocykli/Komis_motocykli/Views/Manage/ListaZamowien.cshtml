@@ -50,7 +50,7 @@
                                                 <a href="@Url.Action("Szczegoly", "Motocykle", new { id = pozycjaZamowienia.MotocyklId })">
                                                     <img class="motocykl" style="width:50%; margin: auto;"src="@Url.Content("~/Content/Motocykle/" + pozycjaZamowienia.motocykl.NazwaPlikuObrazka)" />
                                                     <h1>
-                                                        @pozycjaZamowienia.motocykl.NazwaMotoru - @pozycjaZamowienia.motocykl.Pojemnosc<br />
+                                                        @pozycjaZamowienia.motocykl.NazwaMotoru - @pozycjaZamowienia.motocykl.Pojemnosc [cm3]<br />
                                                         <strong>sztuk: @pozycjaZamowienia.Ilosc, łącznie: @(pozycjaZamowienia.Ilosc * @pozycjaZamowienia.CenaZakupu)  zł</strong>
                                                     </h1>
                                                 </a>
